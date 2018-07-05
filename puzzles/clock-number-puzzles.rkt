@@ -35,7 +35,7 @@ clock-numbers-algebra
               '?))
 
 
-
+#|
 ;7/3/18 more puzzles
 (puzzle-card (rule ' (sub 2 3)
                    '?))
@@ -67,14 +67,16 @@ clock-numbers-algebra
                           (sub 1 0)))
                    '?))
 
+|#
 
+;(define x (contract-random-generate (exact-non 0 1 2 3 4 5 6 7 8 9)))
 
+(define x (+ 0 (random 10)))
+;(list-ref '(and or) (random 2))
+;(list-ref '(0 1 2 3 4 5 6 7 8 9) (random 10))
 
-
-
-
-
-
+(puzzle-card(rule '((list-ref '(and or) (random 2)) x y)
+                   '?))
 
 
 
