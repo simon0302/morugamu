@@ -71,11 +71,16 @@ clock-numbers-algebra
 
 ;(define x (contract-random-generate (exact-non 0 1 2 3 4 5 6 7 8 9)))
 
-(define x (+ 0 (random 10)))
+;(define x (+ 0 (random 10)))
 ;(list-ref '(and or) (random 2))
 ;(list-ref '(0 1 2 3 4 5 6 7 8 9) (random 10))
 
-(puzzle-card(rule '((list-ref '(and or) (random 2)) x y)
+(define (repeat f n)
+  (if (= n 1)
+      f
+      (lambda (x) (f ((repeat f (- n 1)) x)))))
+
+(puzzle-card (rule `(add ,(+ 0 (random 10)) ,(+ 0 (random 10)))
                    '?))
 
 
