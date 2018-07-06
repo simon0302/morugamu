@@ -69,26 +69,14 @@ clock-numbers-algebra
 
 |#
 
-;(define x (contract-random-generate (exact-non 0 1 2 3 4 5 6 7 8 9)))
+((lambda (f i) (f f i))
+ (lambda (x i) 
+   (if (not (= i 10)) ;change value of 10 to loop it 10 minus 1 times
 
-;(define x (+ 0 (random 10)))
-;(list-ref '(and or) (random 2))
-;(list-ref '(0 1 2 3 4 5 6 7 8 9) (random 10))
+       (begin (display
 
-(define (repeat f n)
-  (if (= n 1)
-      f
-      (lambda (x) (f ((repeat f (- n 1)) x)))))
-
-(puzzle-card (rule `(add ,(+ 0 (random 10)) ,(+ 0 (random 10)))
-                   '?))
+               (puzzle-card (rule `(add ,(+ 0 (random 10)) ,(+ 0 (random 10)))'?))
 
 
-
-
-
-
-
-
-
+               ) (x x (+ i 1)))'done)) 1)
 
