@@ -1,0 +1,1 @@
+("6.12" ("c8a7e0bc8dcd11fabd9ee4c175aeb16abf68157c" . "a6c792275cf006382f40b54869e2e178cddf97c6") #"/Users/simon2017/Documents/DrRacketFiles/morugamu/rule-systems/../util/config.rkt" (collects #"2htdp" #"image.rkt") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))
