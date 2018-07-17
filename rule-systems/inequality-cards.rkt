@@ -13,37 +13,27 @@
 
 (define (render theme)
 
-  ;post-refactor
-  
   (define-tile < '< (first theme))
+    ;(bitmap "../themes/emojis/LessThan.png"))
+    
+
   (define-tile max 'max (second theme))
-  (define-tile ret 'ret (third theme))
-  (define-tile = '= (fourth theme))
-  (define-tile min 'min (fifth theme))
-  (define-tile > '> (sixth theme))
-
-  ;below is the pre-refactored code
- #|
-  (define-tile < '<
-    (bitmap "../themes/emojis/LessThan.png"))
-
-  (define-tile max 'max
-    (bitmap "../themes/emojis/max.png"))
+    ;(bitmap "../themes/emojis/max.png"))
     ;(text "max" 50 "black"))
   
-  (define-tile ret 'ret
-    (bitmap "../themes/emojis/ret.png"))
+  (define-tile ret 'ret (third theme))
+    ;(bitmap "../themes/emojis/ret.png"))
 
-  (define-tile = '=
-    (bitmap "../themes/emojis/equals.png"))
+  (define-tile = '= (fourth theme))
+    ;(bitmap "../themes/emojis/equals.png"))
   
-  (define-tile min 'min
-    (bitmap "../themes/emojis/min.png"))
+  (define-tile min 'min (fifth theme))
+    ;(bitmap "../themes/emojis/min.png"))
   
-  (define-tile > '>
-    (bitmap "../themes/emojis/GreaterThan.png"))
-|#
+  (define-tile > '> (sixth theme))
+    ;(bitmap "../themes/emojis/GreaterThan.png"))
 
+  
   (list
    (symbol-page)
 
@@ -115,4 +105,5 @@
               )
 
 
-  ))
+  )
+  )

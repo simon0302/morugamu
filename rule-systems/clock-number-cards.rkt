@@ -15,14 +15,16 @@
   (text s 50 "black"))
 
 (define (render theme)
-  
+
+
+  (define dot (third theme))
+
+
   (define-tile the-successor  'S
     (first theme))
 
   (define-tile the-previous  'P
     (second theme))
-
-  (define dot (third theme))
 
   (define-tile the-0 '0
     (fourth theme))
@@ -126,3 +128,8 @@
               (rule '(sub x y)
                     '(sub (P x) (P y))))
    ))
+
+
+
+
+

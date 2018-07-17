@@ -4,6 +4,7 @@
   2htdp/image
   "../rule-systems/card-designs.rkt"
   "../rule-systems/rules.rkt"
+
   "./printing-util.rkt"
   
   (prefix-in bool: "../rule-systems/boolean-algebra-cards.rkt")
@@ -12,18 +13,28 @@
   
   (prefix-in numb: "../rule-systems/clock-number-cards.rkt")
   (prefix-in numb: "../themes/emoji-clock-arithmetic.rkt")
-  ;clock arithmetic puzzles here
+  (prefix-in numb: "../puzzles/clock-number-puzzles.rkt")
 
   (prefix-in ineq: "../rule-systems/inequality-cards.rkt")
   (prefix-in ineq: "../themes/emoji-inequality.rkt")
-  ;inequality puzzles here
- 
+  (prefix-in ineq: "../puzzles/ineq-puzzles.rkt")
+  
+
   (prefix-in list: "../rule-systems/list-algebra-cards.rkt")
   (prefix-in list: "../themes/emoji-list-algebra.rkt")
   (prefix-in list: "../puzzles/list-algebra-puzzles.rkt")
+
   )
 
 
+(define puzzles
+ 
+  (list bool:puzzle-deck
+        numb:puzzle-deck
+        (rest (list:render list:theme))
+        ineq:puzzle-deck1
+  ;)
+))
 
 (define cards
   (cards->pages
@@ -40,4 +51,4 @@
          (first (list:render list:theme))
          )) 
 
-(append tiles cards)
+(append tiles cards puzzles)

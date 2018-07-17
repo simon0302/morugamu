@@ -13,9 +13,11 @@
 
 ;Called by the number-all function...takes in a pair (image, number) and then puts the number on the image
 (define (place-num couple)
-  (place-image (text (number->string (cdr couple)) 30 "black")
-               300 20
-               (car couple)))
+(overlay/offset (text (number->string (cdr couple)) 30 "black")
+                (+ (-(/ (image-width (car couple)) 2)) 25) ;x-offset
+                (- (/ (image-height (car couple)) 2) 20) ;y-offset
+                (car couple)
+  ))
 
 ;Takes in a list of (images?), numbers each, and then places the number on the image
 (define (number-all pairs)
