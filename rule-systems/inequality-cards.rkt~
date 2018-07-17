@@ -13,19 +13,9 @@
 
 (define (render theme)
 
-  ;post-refactor
-  
-  (define-tile < '< (first theme))
-  (define-tile max 'max (second theme))
-  (define-tile ret 'ret (third theme))
-  (define-tile = '= (fourth theme))
-  (define-tile min 'min (fifth theme))
-  (define-tile > '> (sixth theme))
-
-  ;below is the pre-refactored code
- #|
   (define-tile < '<
     (bitmap "../themes/emojis/LessThan.png"))
+
 
   (define-tile max 'max
     (bitmap "../themes/emojis/max.png"))
@@ -42,8 +32,8 @@
   
   (define-tile > '>
     (bitmap "../themes/emojis/GreaterThan.png"))
-|#
 
+  
   (list
    (symbol-page)
 
@@ -115,4 +105,10 @@
               )
 
 
-  ))
+  )
+  )
+
+
+
+
+
